@@ -1,7 +1,7 @@
 # TODO vendor all these dependencies
 FROM golang:alpine
 RUN \
-  apk update && apk add git make build-base openssl curl file autoconf automake libtool linux-headers libssh2-dev && \
+  apk update && apk add git make build-base openssl curl file autoconf automake libtool linux-headers libssh2-dev openssh-client && \
   cd /root && \
   git clone https://github.com/sandstorm-io/capnproto.git && \
   cd capnproto && \
